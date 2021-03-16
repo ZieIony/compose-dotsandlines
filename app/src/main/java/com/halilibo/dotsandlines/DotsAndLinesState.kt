@@ -1,6 +1,5 @@
 package com.halilibo.dotsandlines
 
-import androidx.compose.ui.unit.IntSize
 import com.halilibo.dotsandlines.Dot.Companion.next
 import kotlin.math.roundToInt
 
@@ -37,10 +36,10 @@ data class DotsAndLinesState(
         fun DotsAndLinesState.populationControl(populationFactor: Float): DotsAndLinesState {
             val count = size.realPopulation(populationFactor = populationFactor)
 
-            return if(count < dots.size) {
+            return if (count < dots.size) {
                 copy(dots = dots.shuffled().take(count))
             } else {
-                copy(dots = dots + (0..count-dots.size).map { Dot.create(size) })
+                copy(dots = dots + (0..count - dots.size).map { Dot.create(size) })
             }
         }
 

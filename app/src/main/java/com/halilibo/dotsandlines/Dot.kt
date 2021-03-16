@@ -1,9 +1,5 @@
 package com.halilibo.dotsandlines
 
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.unit.IntSize
-import java.util.*
-
 data class Dot(
     val position: Offset,
     val vector: Offset
